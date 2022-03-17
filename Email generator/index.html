@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><!--It use bootstrap v5-->
+    <title>Document</title>
+</head>
+<!-- This currently uses my account and will be sent through the email that is connected and some changes needs to occur in the code in both html and JS for future use by the instilt -->
+<body>
+        <div class="container p-30">
+            <!-- Name of the person sending the email -->
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">From</label>
+            <input type="text" class="form-control name" id="exampleFormControlInput1" >
+          </div>
+          <!-- Whom to send -->
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"> To email</label>
+            <input type="email" class="form-control toEmail" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+          <!-- Name of the reciever -->
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"> To</label>
+            <input type="text" class="form-control email-to" id="exampleFormControlInput1">
+          </div>
+          <!-- message for the reciever any text or email  -->
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+            <textarea class="form-control msg" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <!-- button to send the message -->
+          <div class="d-grid gap-2 submit">
+            <button class="btn btn-secondary" type="button">Submit</button>
+          </div>
+          <!-- emailJS script -->
+        </div>
+        <!--This source should be changed according to the account--><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" ></script>
+        <script type="text/javascript">
+        (function() {
+        emailjs.init("1KYAfxULZbPJOguUi");
+        })();
+        </script>
+    <script src="app.js"></script> <!--it connects to the manual app.js-->
+</body>
+</html>
